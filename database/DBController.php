@@ -20,7 +20,7 @@ class DBController
         if ($this->con->connect_error) {
             echo "Fail" .$this->connect_error;
         }
-        echo "Connected successfully";
+//        echo "Connected successfully";
     }
 
     public function __destruct()
