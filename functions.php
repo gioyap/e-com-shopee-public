@@ -17,15 +17,10 @@ $db = new \database\DBController();
 
 //Product object
 $product = new \database\Product($db);
+$product_shuffle = $product->getData();
 
 //to print the data from mysql
 //print_r($product->getData());
 
 //cart object
 $Cart = new Cart($db);
-$arr = array(
-    "user_id" => 6,
-    "item_id" => 9,
-);
-
-$Cart->insertIntoCart($arr);
