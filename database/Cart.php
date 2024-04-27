@@ -30,4 +30,17 @@ class Cart
             }
         }
     }
+
+    //to get user_id and item_id and insert into cart table
+    public function addToCart($userid, $itemid){
+        if(isset($userid) && isset($itemid)){
+            $params = array(
+                "user_id" => $userid,
+                "item_id" => $itemid,
+            );
+            //insert data into cart
+            $result = $this->insertIntoCart($params);
+
+        }
+    }
 }
