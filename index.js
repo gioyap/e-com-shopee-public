@@ -1,8 +1,9 @@
 $(document).ready(function(){
-    // banner owl carousels
+
+    // banner owl carousel
     $("#banner-area .owl-carousel").owlCarousel({
-        dots:true,
-        items:1
+        dots: true,
+        items: 1
     });
 
     // top sale owl carousel
@@ -22,6 +23,7 @@ $(document).ready(function(){
             }
         }
     });
+
     // isotope filter
     var $grid = $(".grid").isotope({
         itemSelector : '.grid-item',
@@ -33,6 +35,7 @@ $(document).ready(function(){
         var filterValue = $(this).attr('data-filter');
         $grid.isotope({ filter: filterValue});
     })
+
 
     // new phones owl carousel
     $("#new-phones .owl-carousel").owlCarousel({
@@ -52,7 +55,7 @@ $(document).ready(function(){
         }
     });
 
-    // blogs owl  carousel
+    // blogs owl carousel
     $("#blogs .owl-carousel").owlCarousel({
         loop: true,
         nav: false,
@@ -67,6 +70,7 @@ $(document).ready(function(){
         }
     })
 
+
     // product qty section
     let $qty_up = $(".qty .qty-up");
     let $qty_down = $(".qty .qty-down");
@@ -80,7 +84,7 @@ $(document).ready(function(){
         let $price = $(`.product_price[data-id='${$(this).data("id")}']`);
 
         // change product price using ajax call
-        $.ajax({url: "Template/ajax.php", type : 'post', data : { itemid : $(this).data("id")}, success: function(result){
+        $.ajax({url: "template/ajax.php", type : 'post', data : { itemid : $(this).data("id")}, success: function(result){
                 let obj = JSON.parse(result);
                 let item_price = obj[0]['item_price'];
 
@@ -107,7 +111,7 @@ $(document).ready(function(){
         let $price = $(`.product_price[data-id='${$(this).data("id")}']`);
 
         // change product price using ajax call
-        $.ajax({url: "Template/ajax.php", type : 'post', data : { itemid : $(this).data("id")}, success: function(result){
+        $.ajax({url: "template/ajax.php", type : 'post', data : { itemid : $(this).data("id")}, success: function(result){
                 let obj = JSON.parse(result);
                 let item_price = obj[0]['item_price'];
 
@@ -127,4 +131,6 @@ $(document).ready(function(){
 
             }}); // closing ajax request
     }); // closing qty down button
+
+
 });
