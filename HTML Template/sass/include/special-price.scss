@@ -5,9 +5,4 @@
         margin-right: 1.2rem;
         margin-top: 1rem;
     }
-    @media (min-width: 1400px) { /* Assuming xl breakpoint starts at 1200px */
-        .grid .grid-item {
-            margin-right: 2rem; /* Override margin-right for xl screens */
-        }
-    }
 }
