@@ -12,6 +12,8 @@
             $Cart->addToCart($_POST['user_id'], $_POST['item_id']);
         }
     }
+
+    $in_cart = $Cart->getCartId($product->getData('cart'));
 ?>
 <section id="special-price">
     <div class="container">
